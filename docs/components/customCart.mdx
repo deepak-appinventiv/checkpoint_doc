@@ -1,0 +1,111 @@
+# Custom Chart
+
+The `Chart` component is a highly customizable and reusable solution for rendering bar charts with advanced features like tooltips, dynamic data updates, and responsive layouts. It leverages the powerful [React Native Gifted Charts](https://www.npmjs.com/package/react-native-gifted-charts) library to create visually appealing and interactive charts for React Native applications.
+
+## Features
+
+- **Dynamic Data Transformation**: Supports converting raw data into meaningful visual representations using date transformations and custom logic.
+- **Customizable Bar Width**: Adapts bar width dynamically based on the selected mode (Day, Week, Month, Year) and screen size.
+- **Tooltip Support**: Displays detailed information when interacting with chart elements, including comparison data from previous datasets.
+- **Responsive Design**: Scales seamlessly across devices, with tablet-specific optimizations.
+- **Configurable Axes and Labels**: Includes customizable Y-axis sections, labels, and formatting for thousands or dollar-suffix conversions.
+- **Theming**: Integrates with color and typography themes for a consistent application style.
+
+## Props
+
+| Prop Name         | Type      | Required | Default | Description                                                   |
+| ----------------- | --------- | -------- | ------- | ------------------------------------------------------------- |
+| `selectedMode`    | `any`     | Yes      | -       | Defines the mode of the chart (e.g., Day, Week, Month, Year). |
+| `graphData`       | `object`  | Yes      | -       | Contains `current` and `previous` datasets to visualize.      |
+| `selectedOption`  | `any`     | Yes      | -       | The selected filter or option for displaying data.            |
+| `denotedVal`      | `any`     | Yes      | -       | The unit or value denotation for the chart.                   |
+| `isChartTypeShow` | `boolean` | No       | `true`  | Whether to display the chart type label below the chart.      |
+| `isDollarSuffix`  | `boolean` | No       | `false` | Whether to append a dollar sign to Y-axis labels.             |
+
+## Example Usage
+
+```tsx
+import React from 'react';
+import Chart from './Chart';
+
+const App = () => {
+  const graphData = {
+    current: [
+      { label: 'Jan', value: 100 },
+      { label: 'Feb', value: 200 },
+    ],
+    previous: [
+      { label: 'Jan', value: 80 },
+      { label: 'Feb', value: 180 },
+    ],
+  };
+
+  return (
+    <Chart
+      selectedMode={'Month'}
+      graphData={graphData}
+      selectedOption={'Revenue'}
+      denotedVal={'$'}
+      isDollarSuffix={true}
+    />
+  );
+};
+
+export default App;
+```
+
+## Key Functions
+
+### Data Transformation
+
+- `transformDates(data, mode)`: Converts raw data into a format suitable for the chart based on the selected mode.
+- `updateAndFilterPrevData(prevData, items)`: Filters and updates previous data to ensure alignment with the current dataset.
+
+### Dynamic Bar Width
+
+Bar width is calculated dynamically based on the selected mode and screen width:
+
+```tsx
+const maxBarWidth =
+  selectedMode === 1 || selectedMode === 'Day'
+    ? getWp(18, 36, 36)
+    : selectedMode === 2 || selectedMode === 'Week'
+    ? getWp(40, 80, 80)
+    : ...;
+```
+
+### Tooltip
+
+Provides additional data insights through a tooltip rendered dynamically:
+
+```tsx
+pointerLabelComponent: (items) => (
+  <TooltipDetails
+    isDollarSuffix={isDollarSuffix}
+    denotedVal={denotedVal}
+    item={items[0]}
+    prevData={filteredUpdatedData[0]}
+    selectedOption={selectedOption}
+  />
+);
+```
+
+## Customization
+
+The `Chart` component supports extensive customization:
+
+- **Line Configurations**: Customize the appearance of line charts using the `lineConfig` prop.
+- **Axis and Label Styles**: Adjust text styles, colors, and spacings via `styles` and theme utilities.
+- **Pointer Behavior**: Modify the behavior and appearance of the pointer using `pointerConfig`.
+
+## Styling
+
+The component uses the following:
+
+- **Styles**: Centralized styles defined in a `styles` file for reuse.
+- **Colors**: Utilizes the application's color palette from `colors`.
+- **Typography**: Supports custom typography settings via `H11` and other components.
+
+## Notes
+
+This component is specifically designed for use in this application and may need adjustments for standalone use. It demonstrates seamless integration with the app's theme and utility functions, such as `getWp`, `getHp`, and `colors`.

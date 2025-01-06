@@ -1,0 +1,77 @@
+# Custom General Header
+
+The `GeneralHeader` component is a reusable header element designed for consistent navigation and labeling within our app. It provides a back button, a title label, and customizable styles to fit various use cases.
+
+## Props
+
+| Prop                   | Type       | Default               | Description                                                |
+| ---------------------- | ---------- | --------------------- | ---------------------------------------------------------- |
+| `label`                | `string`   | `''`                  | The title or label displayed in the center of the header.  |
+| `iconStyles`           | `object`   | `{}`                  | Custom styles for the back button icon.                    |
+| `containerStyle`       | `object`   | `{}`                  | Custom styles for the header container.                    |
+| `buttonContainerStyle` | `object`   | `{}`                  | Custom styles for the back button container.               |
+| `onPressButton`        | `function` | `navigation.goBack()` | Callback function invoked when the back button is pressed. |
+
+## Features
+
+- **Back Button**: A built-in back button to navigate to the previous screen.
+- **Customizable Styles**: Supports customization for the container, button, and icon styles.
+- **Dynamic Label**: Display dynamic titles or labels at the center of the header.
+- **Safe Area Insets**: Automatically adjusts for safe area insets on devices with notches or status bars.
+
+## Usage
+
+### Basic Usage
+
+```jsx
+import React from 'react';
+import GeneralHeader from './GeneralHeader';
+
+const MyScreen = () => {
+  return (
+    <>
+      <GeneralHeader label="My Screen Title" />
+      {/* Screen content here */}
+    </>
+  );
+};
+
+export default MyScreen;
+```
+
+### Custom Styles and Actions
+
+```jsx
+import React from 'react';
+import GeneralHeader from './GeneralHeader';
+
+const MyScreen = () => {
+  const handleBackPress = () => {
+    console.log('Back button pressed!');
+  };
+
+  return (
+    <>
+      <GeneralHeader
+        label="Custom Header"
+        iconStyles={{ tintColor: 'blue' }}
+        containerStyle={{ backgroundColor: 'lightgray', padding: 10 }}
+        buttonContainerStyle={{ marginLeft: 10 }}
+        onPressButton={handleBackPress}
+      />
+      {/* Screen content here */}
+    </>
+  );
+};
+
+export default MyScreen;
+```
+
+## Notes
+
+- The `GeneralHeader` is optimized for both iOS and Android platforms.
+- It automatically adjusts its layout based on safe area insets to ensure proper spacing on devices with notches.
+
+## Contributing
+
+If you would like to suggest enhancements or report bugs for the `GeneralHeader` component, feel free to contribute or provide feedback!

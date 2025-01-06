@@ -1,0 +1,8 @@
+{
+  "label": "Components",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Custom components are utilized to encapsulate reusable logic and design patterns, promoting consistency and efficiency throughout the development process. By leveraging custom components in this context, we achieve simplified code maintenance, enhanced modularity, and improved scalability, ensuring the application remains adaptable to future requirements."
+  }
+}

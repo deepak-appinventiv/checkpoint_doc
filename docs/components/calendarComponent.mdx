@@ -1,0 +1,101 @@
+# Custom Calendar
+
+The `Calendar` is a versatile date selection component built for application. It supports multiple date selection modes such as day, week, month, and year, with customizable options and integration with the `react-native-calendars` library.
+
+## Usage
+
+### Basic Example
+
+```javascript
+import React from 'react';
+import CustomCalendar from './CustomCalendar';
+
+const App = () => {
+  const handleApplyFilter = (
+    selectedDate,
+    markedDates,
+    startDate,
+    endDate,
+    selectedMode,
+    selectedModeId
+  ) => {
+    console.log({
+      selectedDate,
+      markedDates,
+      startDate,
+      endDate,
+      selectedMode,
+      selectedModeId,
+    });
+  };
+
+  return (
+    <CustomCalendar
+      onPressButton={handleApplyFilter}
+      onPressClose={() => console.log('Closed')}
+      selectedDateDay="2024-12-25"
+      selectedMarkedDates={{}}
+      selectedModeVal="Day"
+      selectedModeId={{ title: 'Day' }}
+      maxDatee="2024-12-31"
+    />
+  );
+};
+
+export default App;
+```
+
+## Props
+
+| Prop Name             | Type                  | Default     | Description                                                   |
+| --------------------- | --------------------- | ----------- | ------------------------------------------------------------- |
+| `onPressButton`       | `function`            | Required    | Callback function triggered when the apply button is pressed. |
+| `onPressClose`        | `function`            | Required    | Callback function triggered when the component is closed.     |
+| `selectedDateDay`     | `string`              | `''`        | Pre-selected day in the format `YYYY-MM-DD`.                  |
+| `selectedMarkedDates` | `Record<string, any>` | `{}`        | Marked dates to prepopulate in the calendar.                  |
+| `selectedModeVal`     | `string`              | `'Day'`     | Selected mode (`Day`, `Week`, `Month`, `Year`).               |
+| `selectedModeId`      | `any`                 | `undefined` | Selected mode details.                                        |
+| `formatDateFilter`    | `function`            | `undefined` | Custom function for formatting dates.                         |
+| `selectedStartDate`   | `string`              | `undefined` | Start date for range selection.                               |
+| `selectedEndDate`     | `string`              | `undefined` | End date for range selection.                                 |
+| `maxDatee`            | `string`              | `undefined` | Maximum selectable date in the format `YYYY-MM-DD`.           |
+
+## Features
+
+- **Multiple Selection Modes:** Supports `Day`, `Week`, `Month`, and `Year` modes.
+- **Marked Dates:** Highlights selected or marked dates with custom styles.
+- **ChronoPicker Integration:** Easy navigation between different modes.
+- **Customizable:** Options to set maximum dates, custom styles, and callbacks for better control.
+
+## Customization
+
+The component supports custom theming through props like:
+
+- `markedDates`: Customize the appearance of marked dates.
+- `selectedModeId`: Dynamically switch between modes.
+- `maxDatee`: Restrict date selection beyond a specific range.
+
+## Dependencies
+
+The component relies on the following dependencies:
+
+- `moment`: For date manipulation.
+- `react-native-calendars`: For calendar rendering.
+- `@checkpoint/utils`, `@checkpoint/primitives`, `@checkpoint/localization/en`: For utilities, styling, and localization.
+
+## Testing
+
+The `CustomCalendar` is designed to be testable with pre-set props and callbacks. Example:
+
+```javascript
+const mockOnPressButton = jest.fn();
+render(
+  <CustomCalendar
+    onPressButton={mockOnPressButton}
+    selectedDateDay="2024-12-25"
+    selectedModeVal="Month"
+  />
+);
+```
+
+Trigger interactions and validate via `mockOnPressButton` calls.

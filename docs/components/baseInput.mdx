@@ -1,0 +1,81 @@
+# Custom Input
+
+The `Input` component is a customizable text input field. It is designed to be reusable and includes various features like icons, error handling, and styling options.
+
+## Usage
+
+### Basic Example
+
+```javascript
+import React from 'react';
+import CustomInput from './CustomInput';
+
+const MyComponent = () => {
+  const handleTextChange = (text) => {
+    console.log('Input value:', text);
+  };
+
+  return (
+    <CustomInput
+      label="Enter your name"
+      value=""
+      onChangeText={handleTextChange}
+    />
+  );
+};
+
+export default MyComponent;
+```
+
+## Props
+
+| Prop Name            | Type          | Default               | Description                                                |
+| -------------------- | ------------- | --------------------- | ---------------------------------------------------------- |
+| `label`              | `string`      | `''`                  | Placeholder text for the input field.                      |
+| `value`              | `string`      | `''`                  | Current value of the input field.                          |
+| `leftIcon`           | `ImageSource` | `undefined`           | Icon to display on the left side of the input field.       |
+| `rightIcon`          | `ImageSource` | `undefined`           | Icon to display on the right side of the input field.      |
+| `errorText`          | `string`      | `''`                  | Error message to show below the input.                     |
+| `iconStyle`          | `object`      | `styles.iconStyle`    | Style for the icons.                                       |
+| `rightLabel`         | `string`      | `undefined`           | Text label to display on the right side of the input.      |
+| `onChangeText`       | `function`    | `() => {}`            | Callback function triggered when the text changes.         |
+| `leftIconContainer`  | `object`      | `undefined`           | Custom style for the left icon container.                  |
+| `rightIconContainer` | `object`      | `undefined`           | Custom style for the right icon container.                 |
+| `maxLength`          | `number`      | `40`                  | Maximum length of the input text.                          |
+| `textContainerStyle` | `object`      | `undefined`           | Style for the input's container.                           |
+| `testID`             | `string`      | `${label}-text-input` | Test ID for the input field (useful for testing purposes). |
+| `rightLabelStyle`    | `object`      | `undefined`           | Style for the right label.                                 |
+| `rightIconStyle`     | `object`      | `undefined`           | Style for the right icon.                                  |
+| `onPressRightIcon`   | `function`    | `undefined`           | Callback function for right icon press.                    |
+| `inputCustomStyle`   | `object`      | `undefined`           | Custom style for the text input.                           |
+| `rest`               | `object`      | `undefined`           | Additional props passed to the `TextInput` component.      |
+
+## Features
+
+- **Left and Right Icons:** Supports icons on both sides of the input field.
+- **Error Handling:** Displays an error message and changes the border color when `errorText` is provided.
+- **Customizable Styles:** Provides extensive styling options for various parts of the component.
+- **Platform-Specific Behavior:** Uses `ascii-capable` keyboard on iOS and `visible-password` on Android for better compatibility.
+
+## Styling
+
+The component uses default styles defined in the `styles` file. You can override these styles using props like `iconStyle`, `textContainerStyle`, `inputCustomStyle`, etc.
+
+## Testing
+
+The `testID` prop allows you to set a unique identifier for testing purposes. By default, it is set to `${label}-text-input`.
+
+## Default Props
+
+The following default props are provided:
+
+```javascript
+CustomInput.defaultProps = {
+  value: '',
+  testID: '',
+  maxLength: 40,
+  errorText: '',
+  label: '',
+  onChangeText: () => {},
+};
+```

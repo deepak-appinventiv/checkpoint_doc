@@ -1,0 +1,74 @@
+# Custom Weather Card
+
+The `WeatherCard` component is a beautifully designed UI element used to display weather information dynamically. This component is optimized for our app, ensuring seamless integration and accurate representation of weather data.
+
+## Props
+
+| Prop              | Type          | Default | Description                                                                    |
+| ----------------- | ------------- | ------- | ------------------------------------------------------------------------------ |
+| `weatherData`     | `Object`      | `{}`    | Contains all the weather-related information to be displayed in the component. |
+| `backgroundImage` | `ImageSource` | `null`  | The background image for the weather card, enhancing visual appeal.            |
+
+## Data Extraction
+
+The `WeatherCard` fetches and displays the following details from `weatherData`:
+
+- **Temperature**: Average temperature for the day.
+- **Precipitation Probability**: Maximum precipitation probability.
+- **Weather Code**: Used to determine the weather condition and fetch appropriate icons.
+- **Sunrise and Sunset**: Determines whether the current time is daytime or nighttime.
+
+## Methods and Utilities
+
+The component utilizes several utility functions for enhanced functionality:
+
+- **`isDaytime(sunrise, sunset)`**: Determines whether it is currently daytime based on sunrise and sunset times.
+- **`fetchWeatherCodeIcon(weatherCode)`**: Fetches the appropriate weather icon based on the weather code.
+- **`getWeatherCodeDescription(weatherCode)`**: Provides a descriptive label for the weather condition.
+
+## Usage
+
+### Basic Implementation
+
+```jsx
+import React from 'react';
+import WeatherCard from './WeatherCard';
+import backgroundImage from '../assets/weather-background.jpg';
+
+const weatherData = {
+  daily: {
+    temperature_2m_mean: 72,
+    precipitation_probability_max: 20,
+    weather_code: 3,
+    sunrise: '2024-12-23T07:12:00',
+    sunset: '2024-12-23T17:45:00',
+  },
+};
+
+const App = () => (
+  <WeatherCard weatherData={weatherData} backgroundImage={backgroundImage} />
+);
+
+export default App;
+```
+
+### Customizing the Weather Card
+
+```jsx
+<WeatherCard
+  weatherData={customWeatherData}
+  backgroundImage={require('../assets/custom-bg.jpg')}
+/>
+```
+
+## Features
+
+- **Dynamic Weather Information**: Displays real-time weather data, including temperature, precipitation, and conditions.
+- **Day/Night Awareness**: Adjusts icons based on whether it is daytime or nighttime.
+- **Responsive Design**: Looks great on different screen sizes and orientations.
+- **Customizable Background**: Easily set a custom background image to suit your app's theme.
+
+## Notes
+
+- Ensure that the `weatherData` prop includes valid and complete data for accurate rendering.
+- The component is optimized for both Android and iOS platforms.
