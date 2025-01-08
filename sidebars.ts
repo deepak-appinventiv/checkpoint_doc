@@ -14,7 +14,7 @@ import type { SidebarsConfig } from '@docusaurus/plugin-content-docs';
  */
 const sidebars: SidebarsConfig = {
   // By default, Docusaurus generates a sidebar from the docs folder structure
-  tutorialSidebar: ['core/intro'],
+  // tutorialSidebar: ['quivio/intro'],
   realTimeSidebar: [
     {
       type: 'category',
@@ -22,7 +22,23 @@ const sidebars: SidebarsConfig = {
       items: ['realtime/components/baseInput', 'realtime/components/customButton', 'realtime/components/customBottomSheet', 'realtime/components/customGeneralHeader', 'realtime/components/customHomeHeader', 'realtime/components/customLoader','realtime/components/calendarComponent', 'realtime/components/customWeatherCard', 'realtime/components/customLoader'],
     },
   ],
-
+  quivioSidebar: [
+    {
+      type: 'category',
+      label: 'Components',
+      items: ['quivio/components/intro'],
+    },
+    {
+      type: 'category',
+      label: 'Primitives',
+      items: ['quivio/primitives/intro'],
+    },
+    {
+      type: 'category',
+      label: 'Navigation',
+      items: ['quivio/navigation/intro'],
+    },
+  ],
   // But you can create a sidebar manually
   /*
   tutorialSidebar: [

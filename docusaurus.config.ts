@@ -13,7 +13,7 @@ const config: Config = {
   url: 'https://deepak-appinventiv.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/checkpoint_doc',
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -79,14 +79,12 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'realTimeSidebar',
           position: 'left',
-          slug: '/realtime', 
           label: 'Real Time',
         },
         { 
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            to: '/core', 
-            label: 'Core', 
+            sidebarId: 'quivioSidebar',
+            label: 'Quivio', 
             position: 'left' 
         },
        
