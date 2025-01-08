@@ -1,0 +1,87 @@
+# BottomSheet
+
+The `BottomSheet` component is a highly customizable bottom sheet modal designed for seamless integration into our app. It supports gestures, keyboard-aware functionality, and layout animations, providing a rich and responsive user experience.
+
+
+## Usage
+
+### Basic Usage
+
+```jsx
+import React, { useRef } from 'react';
+import BottomSheet from './BottomSheet';
+import { Text, Button } from 'react-native';
+
+const App = () => {
+  const sheetRef = useRef();
+
+  const openSheet = () => {
+    sheetRef.current.open({
+      children: <Text>Welcome to the Bottom Sheet!</Text>,
+      onClose: () => console.log('Sheet closed!'),
+    });
+  };
+
+  return (
+    <>
+      <Button title="Open Bottom Sheet" onPress={openSheet} />
+      <BottomSheet ref={sheetRef} />
+    </>
+  );
+};
+
+export default App;
+```
+
+### Customizing Appearance
+
+```jsx
+<BottomSheet
+  ref={sheetRef}
+  containerStyle={{ backgroundColor: 'lightgray', padding: 20 }}
+  closeOnDrag={false}
+  maxHeight={500}
+/>
+```
+
+## Props
+
+| Prop             | Type        | Default      | Description                                                               |
+| ---------------- | ----------- | ------------ | ------------------------------------------------------------------------- |
+| `children`       | `ReactNode` | `null`       | Content to render inside the bottom sheet.                                |
+| `containerStyle` | `Object`    | `{}`         | Custom styles for the main container inside the bottom sheet.             |
+| `closeOnDrag`    | `boolean`   | `true`       | Enables or disables the ability to close the sheet by dragging down.      |
+| `height`         | `number`    | `MAX_HEIGHT` | Height of the bottom sheet.                                               |
+| `maxHeight`      | `number`    | `MAX_HEIGHT` | Maximum height for the bottom sheet.                                      |
+| `onBackDrop`     | `Function`  | `null`       | Callback when the backdrop is pressed. Defaults to closing the modal.     |
+| `onClose`        | `Function`  | `() => {}`   | Callback invoked when the sheet is closed.                                |
+| `overflow`       | `string`    | `''`         | Controls the CSS overflow property of the sheet.                          |
+| `keyboardHeight` | `number`    | `0`          | Tracks keyboard height for adjusting layout when the keyboard is visible. |
+| `isSearching`    | `boolean`   | `false`      | Indicates whether the sheet is in search mode.                            |
+| `close`          | `Function`  | `-`          | Programmatically closes the bottom sheet.                                 |
+| `open`           | `Function`  | `-`          | Programmatically opens the bottom sheet with options.                     |
+
+## Methods
+
+The component exposes the following methods through its `ref`:
+
+- `open(options: BottomSheetProps)`: Opens the bottom sheet with optional configuration.
+- `close()`: Closes the bottom sheet.
+
+
+
+## Features
+
+- **Gesture Support**: Swipe down to dismiss the bottom sheet easily.
+- **Keyboard Awareness**: Automatically adjusts layout when the keyboard is visible.
+- **Customizable Layout**: Pass styles and configurations to achieve desired UI.
+- **Programmatic Control**: Use `open` and `close` methods to manage the sheet dynamically.
+
+## Notes
+
+- The `BottomSheet` is optimized for both iOS and Android platforms.
+- Default animations include sliding up and down for open and close transitions.
+
+## Contributing
+
+If you wish to enhance or customize the `BottomSheet` further, feel free to modify the component's code or suggest changes!
