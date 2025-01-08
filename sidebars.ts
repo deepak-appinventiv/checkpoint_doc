@@ -23,6 +23,7 @@ const sidebars: SidebarsConfig = {
     },
   ],
   quivioSidebar: [
+    'quivio/inventory',
     {
       type: 'category',
       label: 'Components',
