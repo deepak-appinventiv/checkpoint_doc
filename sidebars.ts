@@ -1,4 +1,4 @@
-import type { SidebarsConfig } from '@docusaurus/plugin-content-docs';
+import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -17,27 +17,42 @@ const sidebars: SidebarsConfig = {
   // tutorialSidebar: ['quivio/intro'],
   realTimeSidebar: [
     {
-      type: 'category',
-      label: 'Components',
-      items: ['realtime/components/baseInput', 'realtime/components/customButton', 'realtime/components/customBottomSheet', 'realtime/components/customGeneralHeader', 'realtime/components/customHomeHeader', 'realtime/components/customLoader','realtime/components/calendarComponent', 'realtime/components/customWeatherCard', 'realtime/components/customLoader'],
+      type: "category",
+      label: "Components",
+      items: [
+        "realtime/components/baseInput",
+        "realtime/components/customButton",
+        "realtime/components/customBottomSheet",
+        "realtime/components/customGeneralHeader",
+        "realtime/components/customHomeHeader",
+        "realtime/components/customLoader",
+        "realtime/components/calendarComponent",
+        "realtime/components/customWeatherCard",
+        "realtime/components/customLoader",
+      ],
     },
   ],
   quivioSidebar: [
-    'quivio/inventory',
+    "quivio/inventory",
     {
-      type: 'category',
-      label: 'Components',
-      items: ['quivio/components/intro'],
+      type: "category",
+      label: "Components",
+      items: [
+        "quivio/components/intro",
+        "quivio/components/baseButton",
+        "quivio/components/iconButton",
+        "quivio/components/calendarView",
+      ],
     },
     {
-      type: 'category',
-      label: 'Primitives',
-      items: ['quivio/primitives/intro'],
+      type: "category",
+      label: "Primitives",
+      items: ["quivio/primitives/intro"],
     },
     {
-      type: 'category',
-      label: 'Navigation',
-      items: ['quivio/navigation/intro'],
+      type: "category",
+      label: "Navigation",
+      items: ["quivio/navigation/intro"],
     },
   ],
   // But you can create a sidebar manually
