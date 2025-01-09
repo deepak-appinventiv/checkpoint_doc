@@ -42,6 +42,14 @@ const sidebars: SidebarsConfig = {
         "quivio/components/baseButton",
         "quivio/components/iconButton",
         "quivio/components/calendarView",
+        {
+          type: "category",
+          label: "BottomSheets",
+          items: [
+            "quivio/components/bottomSheets/multifiledModal",
+            "quivio/components/bottomSheets/sheetWithBasicSelectors",
+          ],
+        },
       ],
     },
     {
