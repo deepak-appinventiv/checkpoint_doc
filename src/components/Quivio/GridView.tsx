@@ -1,5 +1,6 @@
 import React from "react";
 import "./custom.css"; // Ensure your custom CSS is imported
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 const GridView = () => {
   return (
@@ -10,7 +11,7 @@ const GridView = () => {
         rel="noopener noreferrer"
       >
         <div className="grid-item">
-          <img src="/img/inventory/button.png" />
+          <img src={useBaseUrl("/img/inventory/button.png")} />
         </div>
       </a>
 
@@ -20,7 +21,7 @@ const GridView = () => {
         rel="noopener noreferrer"
       >
         <div className="grid-item">
-          <img src="/img/inventory/button.png" />
+          <img src={useBaseUrl("/img/inventory/button.png")} />
         </div>
       </a>
       <a
@@ -29,7 +30,7 @@ const GridView = () => {
         rel="noopener noreferrer"
       >
         <div className="grid-item">
-          <img src="/img/inventory/button.png" />
+        <img src={useBaseUrl("/img/inventory/button.png")} />
         </div>
       </a>
     </div>
