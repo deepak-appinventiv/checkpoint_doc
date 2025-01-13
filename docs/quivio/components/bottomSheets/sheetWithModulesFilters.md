@@ -1,6 +1,6 @@
 # ModuleFilterModal
 
-The `ModuleFilterModal` component is a React Native modal component that provides a customizable filter interface with checkbox selections, apply and reset functionality, and ref-based control for opening and closing the modal.
+The `ModuleFilterModal` component is a  modal component that provides a customizable filter interface with checkbox selections, apply and reset functionality, and ref-based control for opening and closing the modal.
 
 ## Usage
 

@@ -1,6 +1,6 @@
 # SheetWithFilters
 
-The `SheetWithFilters` component is a versatile React Native filter interface that allows users to select and apply multiple filters from different categories. It features a two-column layout with filter types and their corresponding options, along with reset and apply functionality.
+The `SheetWithFilters` component is a versatile filter interface that allows users to select and apply multiple filters from different categories. It features a two-column layout with filter types and their corresponding options, along with reset and apply functionality.
 
 ## Usage
 

@@ -1,6 +1,6 @@
 # ImageBackground Wrapper
 
-The `ImageBackground` component is a flexible and reusable React Native component for rendering content over a customizable background image. This component supports styling and integrates seamlessly with other React Native elements.
+The `ImageBackground` component is a flexible and reusable component for rendering content over a customizable background image. This component supports styling and integrates seamlessly with other  elements.
 
 ## Usage
 

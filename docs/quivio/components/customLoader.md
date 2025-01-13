@@ -1,6 +1,6 @@
 # CustomLoader
 
-The `CustomLoader` component is a full-screen loading indicator designed for React Native applications. It displays a centered activity spinner that overlays other content, making it ideal for showing loading states during async operations.
+The `CustomLoader` component is a full-screen loading indicator designed for applications. It displays a centered activity spinner that overlays other content, making it ideal for showing loading states during async operations.
 
 ## Usage
 

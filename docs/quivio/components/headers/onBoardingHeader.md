@@ -1,6 +1,6 @@
 # OnBoardingHeader
 
-The `OnBoardingHeader` component is a React Native component designed for displaying onboarding screens with customizable heading, subheading, and span text elements. It provides a clean and structured way to present onboarding information with flexible styling options.
+The `OnBoardingHeader` component is a component designed for displaying onboarding screens with customizable heading, subheading, and span text elements. It provides a clean and structured way to present onboarding information with flexible styling options.
 
 ## Usage
 

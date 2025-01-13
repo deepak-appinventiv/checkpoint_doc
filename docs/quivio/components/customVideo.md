@@ -1,6 +1,6 @@
 # CustomVideo
 
-The `CustomVideo` component is a wrapper around `react-native-video` that provides a customizable video player for React Native applications. It offers flexible control options, custom styling, and loader functionality while maintaining a simple API.
+The `CustomVideo` component is a wrapper around `react-native-video` that provides a customizable video player for applications. It offers flexible control options, custom styling, and loader functionality while maintaining a simple API.
 
 ## Usage
 

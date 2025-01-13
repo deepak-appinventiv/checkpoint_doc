@@ -1,6 +1,6 @@
 # ImageCarousel
 
-The `ImageCarousel` component is a dynamic, auto-scrolling carousel designed for React Native applications. It displays a series of images with descriptive text and includes smooth scrolling animations.
+The `ImageCarousel` component is a dynamic, auto-scrolling carousel designed for applications. It displays a series of images with descriptive text and includes smooth scrolling animations.
 
 ## Usage
 

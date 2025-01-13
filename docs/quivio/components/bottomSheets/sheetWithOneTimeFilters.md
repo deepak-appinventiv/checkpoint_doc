@@ -1,6 +1,6 @@
 # SheetWithOneTimeFilters
 
-The `SheetWithOneTimeFilters` component is a React Native filter interface that combines standard checkbox filters with date-based filtering capabilities. It features a two-column layout with filter types and their corresponding options, including special handling for date selections.
+The `SheetWithOneTimeFilters` component is a filter interface that combines standard checkbox filters with date-based filtering capabilities. It features a two-column layout with filter types and their corresponding options, including special handling for date selections.
 
 ## Usage
 

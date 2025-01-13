@@ -1,6 +1,6 @@
 # CollapsibleContainer
 
-The `CollapsibleContainer` is a flexible React Native component that provides collapsible/expandable functionality with customizable header and content sections. It supports analytics tracking and allows for both standard and inverted collapse behaviors.
+The `CollapsibleContainer` is a flexible component that provides collapsible/expandable functionality with customizable header and content sections. It supports analytics tracking and allows for both standard and inverted collapse behaviors.
 
 ## Installation
 

@@ -1,6 +1,6 @@
 # BaseHeader
 
-The `BaseHeader` component is a customizable header component for React Native applications. It provides a flexible layout with optional left and right icons, a centered heading, and extensive styling options.
+The `BaseHeader` component is a customizable header component for applications. It provides a flexible layout with optional left and right icons, a centered heading, and extensive styling options.
 
 ## Usage
 

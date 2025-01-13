@@ -2,7 +2,7 @@
 
 ## Description
 
-`CustomTouchableInput` is a React Native component that provides a custom touchable input field with various features such as animations, error handling, and dynamic styling. This component supports prefixes, icons, and interactive labels, making it suitable for modern UI requirements.
+`CustomTouchableInput` is a component that provides a custom touchable input field with various features such as animations, error handling, and dynamic styling. This component supports prefixes, icons, and interactive labels, making it suitable for modern UI requirements.
 
 ---
 

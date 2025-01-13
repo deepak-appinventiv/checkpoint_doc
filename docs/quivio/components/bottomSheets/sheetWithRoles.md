@@ -1,6 +1,6 @@
 # SheetWithRoles
 
-The `SheetWithRoles` component is a React Native component that presents a role selection interface with two options: Admin and Employee. It provides a clean, visual way for users to select their role in the application.
+The `SheetWithRoles` component is a component that presents a role selection interface with two options: Admin and Employee. It provides a clean, visual way for users to select their role in the application.
 
 ## Usage
 

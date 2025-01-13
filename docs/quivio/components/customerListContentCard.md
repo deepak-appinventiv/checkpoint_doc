@@ -1,6 +1,6 @@
 # CustomerListContentCard
 
-The `CustomerListContentCard` is a React Native component that renders a customer list item with profile information, vehicle licenses, and registration details. It includes features such as profile badges, expandable vehicle license list, and analytics tracking.
+The `CustomerListContentCard` is a component that renders a customer list item with profile information, vehicle licenses, and registration details. It includes features such as profile badges, expandable vehicle license list, and analytics tracking.
 
 ## Installation
 

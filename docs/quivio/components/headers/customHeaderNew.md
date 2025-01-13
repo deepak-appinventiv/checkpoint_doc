@@ -1,6 +1,6 @@
 # CustomHeaderPrimary
 
-The `CustomHeaderPrimary` component is a sophisticated header component for React Native applications that provides a structured layout with main and sub headers, multiple icon buttons, and notification integration. It includes modular rendering functions and extensive TypeScript support.
+The `CustomHeaderPrimary` component is a sophisticated header component for applications that provides a structured layout with main and sub headers, multiple icon buttons, and notification integration. It includes modular rendering functions and extensive TypeScript support.
 
 ## Usage
 
