@@ -206,8 +206,3 @@ const determineAvailableStatus = (
    - Uses FlatList for efficient rendering
    - Implements proper key handling
    - Optimizes re-renders with proper state management
-
-5. Accessibility:
-   - Supports touch feedback
-   - Clear visual indicators
-   - Proper contrast for selected/unselected states

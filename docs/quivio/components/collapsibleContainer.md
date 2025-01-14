@@ -1,6 +1,6 @@
 # CollapsibleContainer
 
-The `CollapsibleContainer` is a flexible component that provides collapsible/expandable functionality with customizable header and content sections. It supports analytics tracking and allows for both standard and inverted collapse behaviors.
+The `CollapsibleContainer` is a flexible component that provides collapsible/expandable functionality with customizable header and content sections.
 
 ## Installation
 
@@ -31,7 +31,6 @@ const MyComponent = () => {
       collapse={isCollapsed}
       setCollapse={setIsCollapsed}
       headerComponent={header}
-      analyticsEventType="TOGGLE_COLLAPSE"
     >
       <Text>This is the collapsible content</Text>
     </CollapsibleContainer>
@@ -55,7 +54,6 @@ const MyAdvancedComponent = () => {
       headerComponent={<CustomHeader />}
       invertedCollapse={true}
       containerStyle={styles.customContainer}
-      analyticsEventType="CUSTOM_COLLAPSE_EVENT"
     >
       <CustomContent />
     </CollapsibleContainer>
@@ -72,15 +70,14 @@ const styles = StyleSheet.create({
 
 ## Props
 
-| Prop Name            | Type                       | Required | Default | Description                                     |
-| -------------------- | -------------------------- | -------- | ------- | ----------------------------------------------- |
-| `collapse`           | `boolean`                  | Yes      | -       | Controls the visibility of the children content |
-| `setCollapse`        | `(value: boolean) => void` | Yes      | -       | Function to update the collapse state           |
-| `headerComponent`    | `ReactNode`                | Yes      | -       | Component to be rendered as the header          |
-| `invertedCollapse`   | `boolean`                  | No       | `false` | When true, shows content above the header       |
-| `containerStyle`     | `ViewStyle`                | No       | -       | Custom styles for the container                 |
-| `children`           | `ReactNode`                | No       | -       | Content to be collapsed/expanded                |
-| `analyticsEventType` | `string`                   | Yes      | -       | Event type for analytics tracking               |
+| Prop Name          | Type                       | Required | Default | Description                                     |
+| ------------------ | -------------------------- | -------- | ------- | ----------------------------------------------- |
+| `collapse`         | `boolean`                  | Yes      | -       | Controls the visibility of the children content |
+| `setCollapse`      | `(value: boolean) => void` | Yes      | -       | Function to update the collapse state           |
+| `headerComponent`  | `ReactNode`                | Yes      | -       | Component to be rendered as the header          |
+| `invertedCollapse` | `boolean`                  | No       | `false` | When true, shows content above the header       |
+| `containerStyle`   | `ViewStyle`                | No       | -       | Custom styles for the container                 |
+| `children`         | `ReactNode`                | No       | -       | Content to be collapsed/expanded                |
 
 ## Component Structure
 
@@ -95,7 +92,6 @@ The component is structured into three main parts:
 The header component is wrapped in a `Touchable` component that:
 
 - Toggles the collapse state on press
-- Triggers analytics event logging
 - Renders the provided `headerComponent`
 
 ### RenderChildren
@@ -105,14 +101,6 @@ This function determines content visibility based on:
 - The `invertedCollapse` prop
 - Current collapse state
 - Returns the children when appropriate conditions are met
-
-## Analytics Integration
-
-The component automatically logs events using `AnalyticsService` when the header is pressed. The event type is customizable through the `analyticsEventType` prop.
-
-```javascript
-AnalyticsService.logEvent(analyticsEventType, {});
-```
 
 ## Styling
 
@@ -133,7 +121,6 @@ interface RenderHeaderProps {
   headerComponent: React.ReactNode;
   collapse: boolean;
   setCollapse: (value: boolean) => void;
-  analyticsEventType: string;
 }
 
 interface RenderChildrenProps {
@@ -149,16 +136,13 @@ interface CollapsibleContainerProps {
   invertedCollapse?: boolean;
   containerStyle?: ViewStyle;
   children?: React.ReactNode;
-  analyticsEventType: string;
 }
 ```
 
 ## Best Practices
 
 1. **State Management**: Always manage the collapse state in the parent component
-2. **Analytics**: Provide meaningful event types for better tracking
-3. **Performance**: Keep the header component lightweight to ensure smooth animations
-4. **Accessibility**: Ensure the header component includes appropriate accessibility props
+2. **Performance**: Keep the header component lightweight to ensure smooth animations
 
 ## Example Implementation with Error Handling
 
@@ -185,7 +169,6 @@ const SafeCollapsibleExample = () => {
             <Text>{isCollapsed ? "Expand" : "Collapse"}</Text>
           </View>
         }
-        analyticsEventType="SAFE_COLLAPSE_TOGGLE"
       >
         <View style={styles.content}>
           <Text>Collapsible Content</Text>

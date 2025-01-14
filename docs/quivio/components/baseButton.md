@@ -1,6 +1,6 @@
 # BaseButton
 
-The `BaseButton` component is a dynamic and adaptable button designed for application. It includes features such as loading indicators, customizable styling, and comprehensive accessibility support, ensuring an enhanced user experience.
+The `BaseButton` component is a dynamic and adaptable button designed for application. It includes features such as loading indicators, customizable styling, ensuring an enhanced user experience.
 
 ## Usage
 
@@ -44,7 +44,6 @@ export default MyComponent;
 ## Features
 
 - **Loading State:** Displays a spinner when the `isLoading` prop is `true`.
-- **Accessibility:** Includes `accessibilityRole` and `accessibilityLabel` for better screen reader support.
 - **Customizable Styles:** Allows overriding of default styles with `customStyle` and `titleStyle` props.
 - **Gradient Colors:** Supports gradient backgrounds with customizable or default colors.
 

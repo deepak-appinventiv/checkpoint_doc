@@ -53,7 +53,6 @@ export default MyComponent;
 - **Interactive Department View:** Conditionally displays department names with an option to expand/collapse additional departments.
 - **Admin Badge:** Shows an admin badge if the user type is not "Employee".
 - **Locked Status Indicator:** Displays a lock icon if the employee is in a locked state.
-- **Analytics Integration:** Logs events for tracking user interactions.
 - **Navigation Support:** Navigates to the employee detail screen on card press.
 
 ## Default Behavior
@@ -104,19 +103,3 @@ The `ListContentCard` component relies on the `styles` module for its layout and
 - **`styles.departmentText`:** Text style for department names.
 - **`styles.moreText`:** Text style for the "+ more" link.
 - **`styles.adminBadge`:** Styling for the admin badge.
-
-## Analytics Integration
-
-The component logs an analytics event when the card is pressed. Event details include:
-
-- `employee_name`: The full name of the employee.
-- `employee_type`: The type of user (e.g., Employee, Admin).
-
-Example:
-
-```javascript
-AnalyticsService.logEvent(EVENTS.EMPLOYEE_SEARCH_ITEM_CLICKED, {
-  employee_name: `${item?.first_name} ${item?.last_name}`,
-  employee_type: GET_USER_TYPE[item?.user_type],
-});
-```

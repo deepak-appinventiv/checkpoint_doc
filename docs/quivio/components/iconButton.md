@@ -1,6 +1,6 @@
 # IconButtons
 
-The `IconButtons` component is a versatile button designed specifically for use cases where buttons contain only icons. It provides customizable styles, optional SVG support, and robust accessibility options.
+The `IconButtons` component is a versatile button designed specifically for use cases where buttons contain only icons. It provides customizable styles, optional SVG support.
 
 ## Usage
 
@@ -44,7 +44,6 @@ export default MyComponent;
 
 - **Icon Support:** Display icons using either `leftIcon` for images or `svg` for SVG elements.
 - **Customizable Styles:** Allows overriding styles for the button and icons using `leftButtonStyle`, `imageStyle`, and `svgStyle` props.
-- **Accessibility:** Includes `testID` and `disabled` props for enhanced testing and accessibility.
 
 ## Example: Custom Styling
 

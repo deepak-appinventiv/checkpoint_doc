@@ -129,11 +129,6 @@ const styles = {
    - Custom font family for headings
    - Localized strings for all text content
 
-4. Accessibility:
-   - Touch-friendly card sizes
-   - Clear visual hierarchy
-   - Distinct visual separation between options
-
 ## Example: With Custom Styling
 
 ```typescript

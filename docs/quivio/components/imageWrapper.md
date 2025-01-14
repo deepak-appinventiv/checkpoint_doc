@@ -38,7 +38,6 @@ export default MyComponent;
 
 - **Customizable Style:** Easily modify the appearance of the image using the `iconStyle` prop.
 - **Flexible Sizing:** Supports different resize modes (`contain`, `cover`, `stretch`, etc.).
-- **Accessibility & Testing:** Includes `testID` for better accessibility and testing.
 - **Extensibility:** Allows passing additional `ImageProps` for further customization.
 
 ## Example: Dynamic Resizing
@@ -51,14 +50,11 @@ export default MyComponent;
 />
 ```
 
-## Example: Adding Accessibility
-
 ```javascript
 <ImageWrapper
   source={require("./local-image.png")}
   iconStyle={{ width: 150, height: 150 }}
   testID="accessibleImage"
   accessible={true}
-  accessibilityLabel="A descriptive label for the image"
 />
 ```

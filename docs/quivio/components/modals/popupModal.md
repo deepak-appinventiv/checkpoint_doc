@@ -43,7 +43,6 @@ export default MyComponent;
 
 - **Customizable Content:** Allows rendering of custom content via the `children` prop.
 - **Backdrop Interaction:** Handles backdrop press events to close or trigger custom actions.
-- **Accessibility:** Supports `testID` for testing purposes.
 
 ## Example: Custom Styling
 

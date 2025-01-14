@@ -45,7 +45,6 @@ export default MyComponent;
 - **Flexible Layout:** Supports left icon, heading, and right icon placement
 - **Icon Handling:** Optional left and right icons with press handlers
 - **Customizable Styling:** Supports custom styles for header container
-- **Accessibility:** Comprehensive test IDs for all components
 - **Text Overflow:** Handles long headings with ellipsis
 - **Optional Elements:** Gracefully handles missing icons with placeholder spaces
 

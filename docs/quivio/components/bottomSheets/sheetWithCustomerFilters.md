@@ -11,17 +11,11 @@ import React from "react";
 import SheetWithCustomerFilters from "./SheetWithCustomerFilters";
 
 const MyComponent = () => {
-  const handleReset = () => {
-    console.log("Filters Reset");
-  };
+  const handleReset = () => {};
 
-  const handleSubmit = (filters) => {
-    console.log("Filters Submitted:", filters);
-  };
+  const handleSubmit = (filters) => {};
 
-  const handleCross = () => {
-    console.log("Close Filter Sheet");
-  };
+  const handleCross = () => {};
 
   const sampleFilters = [
     {

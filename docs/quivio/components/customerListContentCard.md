@@ -1,6 +1,6 @@
 # CustomerListContentCard
 
-The `CustomerListContentCard` is a component that renders a customer list item with profile information, vehicle licenses, and registration details. It includes features such as profile badges, expandable vehicle license list, and analytics tracking.
+The `CustomerListContentCard` is a component that renders a customer list item with profile information, vehicle licenses, and registration details. It includes features such as profile badges, expandable vehicle license list.
 
 ## Installation
 
@@ -88,16 +88,6 @@ The component integrates with navigation system:
 
 ```javascript
 navigate(screenNames.customerDetail, { cust_id: item.customer_uuid });
-```
-
-## Analytics Integration
-
-Tracks customer interactions using AnalyticsService:
-
-```javascript
-AnalyticsService.logEvent(EVENTS.CUSTOMER_SEARCH_OPTION_CLICK, {
-  customer_name: determineFullName(),
-});
 ```
 
 ## Helper Functions
@@ -202,11 +192,6 @@ export default CustomerListExample;
    - Implement virtualization for long lists
    - Minimize state updates in the show more/less toggle
 
-3. **Accessibility**
-   - Ensure touch targets are adequately sized
-   - Provide meaningful accessibility labels
-   - Support screen reader navigation
-
 ## Dependencies
 
 - @primitives/baseView
@@ -215,7 +200,6 @@ export default CustomerListExample;
 - @quivio/utils/dimensions
 - @quivio/navigation/service
 - @quivio/localization/localString
-- @quivio/services/analytics
 
 ## Component Lifecycle
 
@@ -233,4 +217,3 @@ export default CustomerListExample;
 3. **Interaction**
    - Handles long press events
    - Manages navigation to detail screen
-   - Tracks user interactions with analytics

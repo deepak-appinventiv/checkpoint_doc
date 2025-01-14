@@ -52,7 +52,6 @@ export default MyComponent;
 - **Customizable Design:** Easily style the bottom sheet and its contents using `containerStyle` and other props.
 - **Top Icon Support:** Includes an optional top icon with customizable behavior via `onPressIcon`.
 - **Backdrop Interactions:** Handles backdrop press events for closing or other custom actions.
-- **Accessibility:** Supports test IDs for better testing and accessibility integration.
 
 ## Default Behavior
 

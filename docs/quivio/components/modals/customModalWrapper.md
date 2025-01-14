@@ -52,7 +52,6 @@ export default MyComponent;
 - **Backdrop and Animation:** Includes a semi-transparent backdrop with animation support.
 - **Customizable Styles:** Allows overriding of modal container styles using `modalCustomStyle`.
 - **Event Handlers:** Supports event handlers for modal lifecycle events such as `onModalHide` and `onModalShow`.
-- **Accessibility:** Utilizes native drivers for smoother animations and better performance.
 
 ## Default Behavior
 

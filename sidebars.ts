@@ -98,7 +98,19 @@ const sidebars: SidebarsConfig = {
     {
       type: "category",
       label: "Primitives",
-      items: ["quivio/primitives/intro"],
+      items: [
+        "quivio/primitives/baseView",
+        "quivio/primitives/spacer",
+        "quivio/primitives/touchable",
+        {
+          type: "category",
+          label: "Typography",
+          items: [
+            "quivio/primitives/typography/base",
+            "quivio/primitives/typography/h1",
+          ],
+        },
+      ],
     },
     {
       type: "category",

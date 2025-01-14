@@ -60,7 +60,6 @@ export default MyComponent;
 - **Dual Buttons:** Supports two action buttons with independent callbacks.
 - **Image Support:** Displays an image above the popup content.
 - **Loading State:** Includes a loading state for the primary button.
-- **Accessibility:** Supports `testID` for testing purposes.
 
 ## Default Behavior
 

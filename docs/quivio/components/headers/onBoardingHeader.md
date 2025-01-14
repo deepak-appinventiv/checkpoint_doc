@@ -108,7 +108,6 @@ interface OnBoardingHeaderProps {
 - Wraps content in a ViewWrapper component for layout management
 - Span text is optional and only renders when provided
 - All style props are optional for maximum flexibility
-- Maintains accessibility through test IDs
 
 ## Dependencies
 
