@@ -115,7 +115,27 @@ const sidebars: SidebarsConfig = {
     {
       type: "category",
       label: "Navigation",
-      items: ["quivio/navigation/intro"],
+      items: ["quivio/navigation/utilities"],
+    },
+    {
+      type: "category",
+      label: "Custom Hooks",
+      items: [
+        "quivio/hooks/refs",
+        "quivio/hooks/state",
+        "quivio/hooks/useDebouncing",
+        "quivio/hooks/useFormHandler",
+      ],
+    },
+    {
+      type: "category",
+      label: "Utils",
+      items: [
+        "quivio/utils/colors",
+        "quivio/utils/array-helper",
+        "quivio/utils/dateFormatters",
+        "quivio/utils/dimensions",
+      ],
     },
   ],
   // But you can create a sidebar manually
