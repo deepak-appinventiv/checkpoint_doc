@@ -138,6 +138,25 @@ console.log(iosCheck); // Output: true (if the device is iOS) or false (if the d
 
 ### `isAndroid`
 
+**Description:**
+Checks if the platform is Android.
+
+**Parameters:**
+
+- `None`: No Parameters
+
+**Returns:**
+
+- `true`: if the platform is Android.
+- `false`: if the platform is not Android.
+
+**Example Usage:**
+
+```ts
+const androidCheck = isAndroid();
+console.log(androidCheck);  // Output: true (if the device is Android) or false (if the device is iOS)
+```
+
 ### `isTablet`
 
 **Description:**
