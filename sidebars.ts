@@ -142,6 +142,14 @@ const sidebars: SidebarsConfig = {
         "quivio/utils/validators",
       ],
     },
+    {
+      type: "category",
+      label: "Services",
+      items: [
+        "quivio/services/analytics/analytics",
+        "quivio/services/apis/apis",
+      ],
+    },
   ],
   // But you can create a sidebar manually
   /*
